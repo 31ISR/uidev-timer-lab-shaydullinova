@@ -58,7 +58,7 @@ function start() {
 
     isRunning = true;
 
-    let timer = setInterval(() => {
+    timer = setInterval(() => {
         elapsedTime++;
         updateDisplay();
     }, 1000);
@@ -97,7 +97,7 @@ function recordLap() {
 
 function reset() {
     stop();
-    elapsedTime = 0
+    elapsedTime = 0;
     lapCount = 0;
     updateDisplay();
     lapList.innerHTML = "";
@@ -105,7 +105,7 @@ function reset() {
 }
 
 startBtn.addEventListener("click", start);
-stopBtn.addEventListener("click", stop)
+stopBtn.addEventListener("click", stop);
 lapBtn.addEventListener("click", recordLap);
 resetBtn.addEventListener("click", reset);
 
