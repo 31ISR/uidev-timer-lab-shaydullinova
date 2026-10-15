@@ -30,7 +30,6 @@ function formatTime(totalSeconds) {
 
     return `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
 }
-console.log(formatTime(3725));
 
 
 const circumference = 2 * Math.PI * 52;
@@ -44,9 +43,9 @@ function updateDisplay() {
     const minutes = Math.floor((elapsedTime % 3600) / 60);
     const seconds = elapsedTime % 60;
 
-    const hoursEl = hours.toString().padStart(2, '0');
-    const minutesEl = minutes.toString().padStart(2, '0');
-    const secondsEl = seconds.toString().padStart(2, '0');
+    hoursEl.textContent = hours.toString().padStart(2, '0');
+    minutesEl.textContent = minutes.toString().padStart(2, '0');
+    secondsEl.textContent = seconds.toString().padStart(2, '0');
 
     updateCircleProgress(hoursCircle, hours, 24);
     updateCircleProgress(minutesCircle, minutes, 60);
